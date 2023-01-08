@@ -14,12 +14,25 @@ Flutter 웹툰 앱
   - prefer_const_constructors warning 포함 기타 설정
   - command + shift + p > user settings 입력 후 아래 내용 기입
   ```json
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-  },
-  // dart
-  "dart.previewFlutterUiGuides": true,
-  "dart.openDevTools": "flutter",
-  "dart.debugExternalPackageLibraries": true,
-  "dart.debugSdkLibraries": false,
+  {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    // dart & flutter
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [80],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false,
+      "editor.defaultFormatter": "Dart-Code.dart-code"
+    },
+    "dart.previewFlutterUiGuides": true,
+    "dart.openDevTools": "flutter",
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false
+  }
   ```
