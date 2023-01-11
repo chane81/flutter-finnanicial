@@ -1,4 +1,5 @@
 {
+  "editor.snippetSuggestions": "top",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
