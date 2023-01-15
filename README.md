@@ -1,6 +1,6 @@
 # toonflix
 
-Flutter 웹툰 앱
+Flutter ui challenge 앱
 
 ## settings
 
