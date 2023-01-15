@@ -6,7 +6,20 @@ void main() {
   runApp(App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  int counter = 0;
+
+  void onClickTransfer() {
+    setState(() {
+      counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +40,13 @@ class App extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
+                          Text(
+                            '$counter',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                            ),
+                          ),
                           const Text(
                             'Hey, Selena',
                             style: TextStyle(
@@ -72,13 +92,14 @@ class App extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Button(
-                        text: 'Transfer',
+                        text: 'Add Card',
                         bgColor: Colors.amber,
                         textColor: Colors.black,
+                        onClick: onClickTransfer,
                       ),
-                      Button(
+                      const Button(
                         text: 'Request',
                         bgColor: Color(0xFF1F2123),
                         textColor: Colors.white,
@@ -133,6 +154,15 @@ class App extends StatelessWidget {
                     isInverted: false,
                     order: -4,
                   ),
+                  for (var n = 0; n < counter; n++)
+                    CurrencyCard(
+                      name: 'Dollar',
+                      code: 'USD',
+                      amount: '428',
+                      icon: Icons.attach_money_outlined,
+                      isInverted: n % 2 == 0,
+                      order: ((n * 2) + 6) * -1,
+                    )
                 ],
               ),
             ),
