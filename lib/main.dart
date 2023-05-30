@@ -3,10 +3,12 @@ import 'package:toonflix/widgets/Button.dart';
 import 'package:toonflix/widgets/currency_card.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
+  const App({super.key});
+
   @override
   State<App> createState() => _AppState();
 }
