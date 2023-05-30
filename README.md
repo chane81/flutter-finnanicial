@@ -4,6 +4,14 @@ Flutter ui challenge 앱
 
 ## settings
 
+```bash
+# 3.3.10 버전 사용
+$ fvm use 3.3.10
+
+# pub get
+$ fvm flutter pub get
+```
+
 ### vs-code
 
 - 코드를 작성하다 보면 아래 그림과 같이 const 로 사용하라고 파란줄이 나오는걸 알 수 있다.
