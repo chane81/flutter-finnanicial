@@ -1,4 +1,4 @@
-# toonflix
+# finnanicial
 
 Flutter ui challenge 앱
 
